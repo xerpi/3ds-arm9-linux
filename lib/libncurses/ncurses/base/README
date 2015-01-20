@@ -1,0 +1,7 @@
+-- $Id: README 317 2005-10-02 21:32:49Z pepsiman $
+
+The functions in this directory are the generic (not device-specific) modules
+of ncurses.
+
+As a rule, these modules should not depend directly on term.h references and
+associated terminfo function and variables.

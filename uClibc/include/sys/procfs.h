@@ -1,1 +1,1 @@
-link ../../libc/sysdeps/linux/arm/sys/procfs.h
+../../libc/sysdeps/linux/arm/sys/procfs.h

@@ -1,1 +1,1 @@
-link ../../libc/sysdeps/linux/arm/sys/io.h
+../../libc/sysdeps/linux/arm/sys/io.h

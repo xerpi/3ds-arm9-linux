@@ -1,1 +1,1 @@
-link ../../libc/sysdeps/linux/arm/sys/elf.h
+../../libc/sysdeps/linux/arm/sys/elf.h

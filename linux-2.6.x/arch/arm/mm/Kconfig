@@ -196,7 +196,7 @@ config CPU_ARM926T
 # ARM946E
 config CPU_ARM946E
 	bool "Support ARM946E processor"
-	depends on ARCH_ST501X0 || ARCH_NDS
+	depends on ARCH_ST501X0 || ARCH_NDS || ARCH_N3DS
 	select CPU_32v5
 	select CPU_ABRT_EV5T
 	select CPU_CACHE_V4WB

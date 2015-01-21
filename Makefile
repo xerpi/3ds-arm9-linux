@@ -396,3 +396,9 @@ dist-prep:
 .PHONY: xsh
 xsh:
 	@$(MAKE) -f Makefile.$@
+
+#### SHIT STUFF BY XERPI
+copy:
+	@cp "$(IMAGEDIR)/dslinux_3ds.bin" "/media/$(USER)/GATEWAYNAND/"
+	@sync
+	@echo "Copied!"

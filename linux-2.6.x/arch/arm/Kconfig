@@ -284,6 +284,11 @@ config ARCH_S3C2500
 	help
 	  Samsung's S3C2500 SOC(ARM940T).
 
+config ARCH_N3DS
+	bool "Nintendo 3DS"
+	help
+	  The Nintendo 3DS.
+
 config ARCH_NDS
 	bool "Nintendo DS"
 	help
@@ -388,6 +393,8 @@ source "arch/arm/mach-espd_4510b/Kconfig"
 source "arch/arm/mach-s3c24a0/Kconfig" 
 
 source "arch/arm/mach-p2001/Kconfig"
+
+source "arch/arm/mach-n3ds/Kconfig"
 
 source "arch/arm/mach-nds/Kconfig"
 
@@ -843,7 +850,7 @@ source "drivers/acorn/block/Kconfig"
 if PCMCIA || ARCH_CLPS7500 || ARCH_IOP3XX || ARCH_IXP4XX \
 	|| ARCH_L7200 || ARCH_LH7A40X || ARCH_PXA || ARCH_RPC \
 	|| ARCH_S3C2410 || ARCH_SA1100 || ARCH_SHARK || FOOTBRIDGE \
-	|| ARCH_NDS
+	|| ARCH_NDS || ARCH_N3DS
 source "drivers/ide/Kconfig"
 endif
 

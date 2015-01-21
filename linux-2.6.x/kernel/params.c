@@ -24,11 +24,11 @@
 #include <linux/device.h>
 #include <linux/err.h>
 
-#if 0
+//#if 0
 #define DEBUGP printk
-#else
-#define DEBUGP(fmt, a...)
-#endif
+//#else
+//#define DEBUGP(fmt, a...)
+//#endif
 
 static inline int dash2underscore(char c)
 {

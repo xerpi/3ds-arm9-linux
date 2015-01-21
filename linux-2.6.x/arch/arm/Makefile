@@ -139,8 +139,10 @@ textaddr-$(CONFIG_ARCH_S3C24A0)	   := 0x10008000
 endif
  machine-$(CONFIG_ARCH_P2001)	   := p2001
 textaddr-$(CONFIG_ARCH_P2001)	   := 0x40100000
- machine-$(CONFIG_ARCH_NDS)	   := nds
-textaddr-$(CONFIG_ARCH_NDS)	   := 0x02000000
+ machine-$(CONFIG_ARCH_NDS)	   	   := nds
+textaddr-$(CONFIG_ARCH_NDS)	   	   := 0x02000000
+ machine-$(CONFIG_ARCH_N3DS)	   := n3ds
+textaddr-$(CONFIG_ARCH_N3DS)	   := 0x20008000
 
 ifeq ($(CONFIG_ARCH_EBSA110),y)
 # This is what happens if you forget the IOCS16 line.

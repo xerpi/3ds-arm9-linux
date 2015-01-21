@@ -707,7 +707,7 @@ void __init trap_init(void)
 	flush_icache_range(VECTORS_BASE, VECTORS_BASE + PAGE_SIZE);
 	modify_domain(DOMAIN_USER, DOMAIN_CLIENT);
 
-#ifdef CONFIG_ARCH_NDS
+#if defined(CONFIG_ARCH_NDS) || defined(CONFIG_ARCH_N3DS)
 	/* You mess with our interrupt vectors and Chuck Norris will get ya! */
 	disable_writes_to_itcm();
 #endif

@@ -105,6 +105,10 @@ static inline void acpi_early_init(void) { }
 extern void tc_init(void);
 #endif
 
+#ifdef CONFIG_N3DS_TEXT_CONSOLE
+extern int n3ds_console_init(void);
+#endif
+
 enum system_states system_state;
 EXPORT_SYMBOL(system_state);
 
@@ -448,8 +452,9 @@ asmlinkage void __init start_kernel(void)
  * Interrupts are still disabled. Do necessary setups, then
  * enable them
  */
-#ifdef CONFIG_NDS_TEXT_CONSOLE
-	nds_console_init();
+
+#ifdef CONFIG_N3DS_TEXT_CONSOLE
+	n3ds_console_init();
 #endif
 	lock_kernel();
 	page_address_init();
@@ -484,6 +489,7 @@ asmlinkage void __init start_kernel(void)
 		   &unknown_bootoption);
 	sort_main_extable();
 	trap_init();
+	printk("PASS TRAP INIT");
 	rcu_init();
 	init_IRQ();
 	pidhash_init();

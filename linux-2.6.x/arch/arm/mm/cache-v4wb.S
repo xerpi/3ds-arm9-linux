@@ -26,7 +26,7 @@
 # define CACHE_DSIZE	16384
 #elif defined(CONFIG_CPU_SA1100)
 # define CACHE_DSIZE	8192
-#elif defined(CONFIG_ARCH_NDS)
+#elif defined(CONFIG_ARCH_NDS) || defined(CONFIG_ARCH_N3DS)
 # define CACHE_DSIZE	4096
 #else
 # error Unknown cache size

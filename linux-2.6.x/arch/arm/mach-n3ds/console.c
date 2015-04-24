@@ -22,15 +22,16 @@ extern const unsigned char msx_font[];
 #define SCREEN_TOP_H  (240)
 #define SCREEN_BOT_H  (240)
 
-#define FB_TOP_LEFT1  (0x20184E60)
-#define FB_TOP_LEFT2  (0x201CB370)
-#define FB_TOP_RIGHT1 (0x20282160)
-#define FB_TOP_RIGHT2 (0x202C8670)
-#define FB_BOT_1	  (0x202118E0)
-#define FB_BOT_2	  (0x20249CF0)
+#define FB_TOP_SIZE	  (400*240*3)
+#define FB_BOT_SIZE	  (340*240*3)
 
-#define FB_TOP_SIZE	  (0x46500)
-#define FB_BOT_SIZE	  (0x3BC40)
+#define VRAM_BASE     (0x18000000)
+#define FB_TOP_LEFT1  (VRAM_BASE)
+#define FB_TOP_LEFT2  (FB_TOP_LEFT1  + FB_TOP_SIZE)
+#define FB_TOP_RIGHT1 (FB_TOP_LEFT2  + FB_TOP_SIZE)
+#define FB_TOP_RIGHT2 (FB_TOP_RIGHT1 + FB_TOP_SIZE)
+#define FB_BOT_1      (FB_TOP_RIGHT2 + FB_TOP_SIZE)
+#define FB_BOT_2      (FB_BOT_1      + FB_BOT_SIZE)
 
 #define RED	   0xFF0000
 #define GREEN  0x00FF00
